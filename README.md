@@ -31,12 +31,19 @@ Finally, download 'tpo' folder from this repo.
 ## Important
 
 1. Match data format and headers exactly with given sample file.
+
 2. It is not necessary to have the same data source for historical and live data as long as the format matches. It wouldn't matter even if symbol name is different, or there is price overlap the algorithm will drop the duplicate entries automatically.
 2. Algorithm uses historical data for generating context. In tpo_project.py at the start, there is 'avglen' parameter. That number should be lower or equal to the sample size of your historical data. If you have 31 days of historical data then use avglen = 30
+
 3. Make sure your historical file is up to date, especially entries representing day 1 and day 2. The algorithm automatically calculates session time and Initial Balance period using that info. IB is of 60 minutes. It assumes you have 1-minute data. I haven't tested on daily data. 
+
 4. If your live feed is of 1 minute instead of a tick, you may want to increase the refresh time 'refresh_int' which is set to default 1 second.
+
 5. Chart update will not work until live file gets at least 30 minutes worth of data. To remove the limitation reduce frequency-time 'freq' from default 30 to 5 minutes or lower. But it will affect TPO chart calculations. So if possible don't change the parameter.
+
 
 ## How to read TPO chart and resources
 Highly reccomend Mind over Markets by Jim Dalton https://www.amazon.com/Mind-over-Markets-Generated-Information-ebook/dp/B004RJ8PSE
+
 CBOT Market Profile handbook (it is 13 mb pdf file)  https://t.co/L8DfNkLNi5?amp=1
+
