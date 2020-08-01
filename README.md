@@ -5,10 +5,13 @@ While working on the project realized that it is possible to use this entire fra
 
 Okay, let's get started.
 ## Dependencies
-pip install plotly,
-pip install dash,
-pip install pandas,
-Finally, download 'tpo' folder from this repo.
+pip install plotly
+
+pip install dash
+
+pip install pandas
+
+Finally, download all the files or clone this repo as zip and extract in local folder.
 
 ## Steps
 
