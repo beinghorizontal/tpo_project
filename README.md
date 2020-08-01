@@ -43,7 +43,7 @@ Finally, download 'tpo' folder from this repo.
 
 
 ## How to read TPO chart and resources
-Highly reccomend Mind over Markets by Jim Dalton https://www.amazon.com/Mind-over-Markets-Generated-Information-ebook/dp/B004RJ8PSE
+Highly reccomend Mind over Markets by Jim Dalton
 
 CBOT Market Profile handbook (it is 13 mb pdf file)  https://t.co/L8DfNkLNi5?amp=1
 
