@@ -5,15 +5,15 @@ While working on the project realized that it is possible to use this entire fra
 
 Okay, let's get started.
 ## Dependencies
-pip install plotly
+pip install plotly (update if previously installed)
 
-pip install dash
+pip install dash (update if previously installed)
 
 pip install pandas
 
 Finally, download all the files or clone this repo as zip and extract in local folder.
 
-## Steps
+## Steps for live chart
 
 1 Open tpo_project.py from the folder in python editor
 
@@ -30,6 +30,10 @@ Finally, download all the files or clone this repo as zip and extract in local f
 7. If the test runs successfully replace live and historical data with your desired data feed.
 
 8. Stop the server by pressing ctrl + c in the console.
+
+## For static chart
+
+Simply run static_tpo.py and chart will open in your browser
 
 ## Important
 
