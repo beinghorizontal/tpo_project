@@ -15,15 +15,15 @@ Finally, download all the files or clone this repo as zip and extract in local f
 
 ## Steps for live chart
 
-1 Open tpo_project.py from the folder in python editor
+1. Open tpo_project.py from the folder in python editor
 
-2 Run the code
+2. Run the code
 
-3 In the console, you will see the message something like Running on http://127.0.0.1:8050/ copy the server address your console printed and paste it in your browser
+3. In the console, you will see the message something like Running on http://127.0.0.1:8050/ copy the server address your console printed and paste it in your browser
 
-4 That's it, you will get the TPO chart in browser with sample file provided in the folder.
+4. That's it, you will get the TPO chart in browser with sample file provided in the folder.
 
-5 About sample file: There is live.txt file in the folder. Add data manually and you should see new updated price in the chart. 
+5. About sample file: There is live.txt file in the folder. Add data manually and you should see new updated price in the chart. 
 
 6. Marker shows the last closing price. The market color changes to green if price >= POC else it is red.
 
@@ -50,6 +50,13 @@ Simply run static_tpo.py and chart will open in your browser
 
 
 ## How to read TPO chart and resources
+
+![How to read the chart-1](https://user-images.githubusercontent.com/28746824/89113991-6486e880-d495-11ea-9566-8c3040dda9db.png)
+
+![How to read charts. Hover menu -2](https://user-images.githubusercontent.com/28746824/89114044-f989e180-d495-11ea-966f-81c975da08e5.png)
+
+![How to read the charts: square boxes -3](https://user-images.githubusercontent.com/28746824/89114065-37870580-d496-11ea-99c0-a6a208441a44.png)
+
 Highly reccomend Mind over Markets by Jim Dalton
 
 CBOT Market Profile handbook (it is 13 mb pdf file)  https://t.co/L8DfNkLNi5?amp=1
