@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Aug  2 05:17:43 2020
+Created on Sat Aug  2 05:17:43 2020
 
 @author: alex1
+twitter.com/beinghorizontal
+
+This is for checking whether the issue is due to dash dependency. It generates static TPO chart using just plotly
 """
 
 import pandas as pd
