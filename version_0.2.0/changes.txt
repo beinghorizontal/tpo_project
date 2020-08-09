@@ -1,0 +1,12 @@
+Redefined insights (Hover text in bubbles and squares) 
+
+Insights now pops up vertically instead of horizontally
+
+Insights shows market strength i.e. total weightage and wightage breakdown
+
+For faster uploads using big data used plotly's GPU rendering (scattergl)
+
+For live streaming charts historical calculations done only for the first time when chart loads and calculations for the live data appended as new data arrives.
+
+Added a new type of static TPO chart. Static TPO with range slider. Unlike PLotly's default slider bar, this one uses Dash's range slider. The big difference is it dynamically updates Y-axis so after the zooming chart wouldn't look dwarfed.
+
