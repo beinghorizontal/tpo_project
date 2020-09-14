@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Jul 30 06:34:11 2020
+Updated on Mon Sep 15 15:34:11 2020
 
-@author: alex1
+@author: alex
 
 twitter.com/beinghorizontal
 
@@ -16,7 +16,7 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
-from tpo_helper2 import get_ticksize, abc, get_mean, get_rf, get_context, get_dayrank, get_ibrank
+from tpo_helper2_git import get_ticksize, abc, get_mean, get_rf, get_context, get_dayrank, get_ibrank
 import numpy as np
 from datetime import timedelta
 
@@ -148,8 +148,14 @@ def update_graph(n, df=dfresample.copy(), dfcontext=dfcontext):
 
     # !!! get TPO for each day
     DFList = [group[1] for group in df.groupby(df.index.date)]
-    for i in range(len(dfmp_list)):  # test the loop with i=1
 
+    if trading_hr >= 12:
+        day_loop = len(dfmp_list) - 1
+    else:
+        day_loop = len(dfmp_list)
+
+    for i in range(day_loop):  # test the loop with i=1
+        # print(i)
         # df1 is used for datetime axis, other dataframe we have is df_mp but it is not a timeseries
         df1 = DFList[i].copy()
         df_mp = dfmp_list[i]
@@ -284,8 +290,8 @@ def update_graph(n, df=dfresample.copy(), dfcontext=dfcontext):
     fig.layout.xaxis.color = 'white'
     fig.layout.yaxis.color = 'white'
     fig.layout.autosize = True
-    fig["layout"]["height"] = 700
-    fig["layout"]["width"] = 2100
+    fig["layout"]["height"] = 900
+    fig["layout"]["width"] = 1900
     # fig.layout.hovermode = 'x'  # UNcomment this if you want to see insights for both squares and bubbles
 
     fig.update_xaxes(title_text='Time', title_font=dict(size=18, color='white'),
@@ -299,10 +305,13 @@ def update_graph(n, df=dfresample.copy(), dfcontext=dfcontext):
 
     fig["layout"]["xaxis"]["rangeslider"]["visible"] = False
     fig["layout"]["xaxis"]["tickformat"] = "%H:%M:%S"
+    fig.update_layout(yaxis_tickformat='d')
 
     return fig
 
+# from plotly.offline import plot
+# plot(fig, auto_open=True)
 
 # ------------------------------------------------------------------------------
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    app.run_server(debug=True)  # To run the code from ipython based IDEs such as spyder, pycharm <debug=False>
