@@ -16,7 +16,7 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
-from tpo_helper2_git import get_ticksize, abc, get_mean, get_rf, get_context, get_dayrank, get_ibrank
+from tpo_helper2 import get_ticksize, abc, get_mean, get_rf, get_context, get_dayrank, get_ibrank
 import numpy as np
 from datetime import timedelta
 
