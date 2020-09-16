@@ -250,9 +250,9 @@ def update_graph(n, df=dfresample.copy(), dfcontext=dfcontext):
     # ib high and low
     fig.add_shape(
         type="line",
-        x0=df1.iloc[0]['datetime'],
+        x0=df.iloc[0]['datetime'],
         y0=ib_low_list[i],
-        x1=df1.iloc[0]['datetime'],
+        x1=df.iloc[0]['datetime'],
         y1=ib_high_list[i],
         line=dict(
             color="cyan",
@@ -261,30 +261,31 @@ def update_graph(n, df=dfresample.copy(), dfcontext=dfcontext):
     # day high and low
     fig.add_shape(
         type="line",
-        x0=df1.iloc[0]['datetime'],
+        x0=df.iloc[0]['datetime'],
         y0=dl_list[i],
-        x1=df1.iloc[0]['datetime'],
+        x1=df.iloc[0]['datetime'],
         y1=dh_list[i],
         line=dict(
             color="gray",
             width=1,
             dash="dashdot", ), )
     # ltp marker
-    ltp = df1.iloc[-1]['Close']
+    ltp = df.iloc[-1]['Close']
     if ltp >= irank.poclist:
         ltp_color = 'green'
     else:
         ltp_color = 'red'
 
     fig.add_trace(go.Scattergl(
-        x=[df1.iloc[-1]['datetime']],
-        y=[df1.iloc[-1]['Close']],
+        x=[df.iloc[-1]['datetime']],
+        y=[df.iloc[-1]['Close']],
         mode="text",
         name="last traded price",
         text=['last '+str(df1.iloc[-1]['Close'])],
         textposition="bottom right",
         textfont=dict(size=12, color=ltp_color),
         showlegend=False
+
     ))
 
     fig.layout.xaxis.color = 'white'
