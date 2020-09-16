@@ -270,7 +270,7 @@ def update_graph(n, df=dfresample.copy(), dfcontext=dfcontext):
             width=1,
             dash="dashdot", ), )
     # ltp marker
-    ltp = df.iloc[-1]['Close']
+    ltp = df1.iloc[-1]['Close']
     if ltp >= irank.poclist:
         ltp_color = 'green'
     else:
